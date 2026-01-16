@@ -20,7 +20,7 @@ export function Projects() {
   };
 
   return (
-    <section id="work" className="min-h-screen flex items-center justify-center px-6 py-20 relative z-30">
+    <section id="journey" className="min-h-screen flex items-center justify-center px-6 py-20 relative z-30">
       {/* Project card transition overlay */}
       <ProjectCardTransition 
         projectTitle={clickedProject?.title} 

@@ -14,7 +14,7 @@ export function Navigation() {
         </a>
         
         <div className="flex gap-8 text-sm">
-          {['Work', 'About', 'Contact'].map((item, i) => (
+          {['Journey', 'About', 'Contact'].map((item, i) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
