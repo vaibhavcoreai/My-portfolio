@@ -29,7 +29,7 @@ export function ProjectCardTransition({ projectTitle, isActive }: ProjectCardTra
   if (prevPath && prevPath !== location.pathname) {
     if (location.pathname.includes('/project/')) {
       setIsTransitioning(true);
-      setDisplayText('Opening project');
+      setDisplayText('OPENING JOURNEY');
 
       if (!projectTitle) {
         const projectId = location.pathname.split('/').pop()!;
