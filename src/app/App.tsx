@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "motion/react";
+import { Analytics } from "@vercel/analytics/react";
 import { HomePage } from "./components/HomePage";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { LoadingScreen } from "./components/LoadingScreen";
@@ -75,6 +76,7 @@ export default function App() {
           </PageTransition>
         </Router>
       )}
+      <Analytics />
     </>
   );
 }
