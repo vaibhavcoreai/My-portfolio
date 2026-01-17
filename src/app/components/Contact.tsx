@@ -35,7 +35,7 @@ export function Contact() {
                   Email
                 </h3>
                 <a 
-                  href="mailto:hello@alexmorgan.com"
+                  href="mailto:vaibhavmanaji43@gmail.com"
                   className="text-xl hover:translate-x-2 inline-block transition-transform duration-300"
                 >
                   vaibhavmanaji43@gmail.com
