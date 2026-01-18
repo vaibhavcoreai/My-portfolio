@@ -12,6 +12,8 @@ export interface ProjectData {
   technologies: string[];
   duration: string;
   role: string;
+  link?: string;
+  github?: string;
 }
 
 // Learning Journey - Data Science & ML Learning Path
@@ -92,7 +94,9 @@ export const actualProjectsData: ProjectData[] = [
     ],
     technologies: ['React 19', 'Vite 7', 'Tailwind CSS 4', 'TipTap', 'React Router 7', 'Firebase Auth', 'Cloud Firestore', 'Vercel', 'TypeScript'],
     duration: 'Completed · January 2026',
-    role: 'Full-stack Development · UI/UX Design · Firebase Integration'
+    role: 'Full-stack Development · UI/UX Design · Firebase Integration',
+    link: 'https://forwriters.vercel.app/',
+    github: 'https://github.com/vaibhavcoreai/writer'
   },
   {
     id: 'portfolio-website',
