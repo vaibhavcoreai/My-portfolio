@@ -52,8 +52,8 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ 
-            duration: 0.8, 
+          transition={{
+            duration: 0.8,
             delay: 0.2,
             ease: [0.43, 0.13, 0.23, 0.96]
           }}
@@ -110,7 +110,7 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
                 }}
               />
             </svg>
-            
+
             {/* Percentage text */}
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="text-xs font-light text-neutral-400">
@@ -126,7 +126,7 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
             transition={{ duration: 0.6, delay: 1 }}
             className="text-xs tracking-[0.2em] uppercase text-neutral-400 font-light"
           >
-            Loading journey
+            Loading...
           </motion.p>
         </motion.div>
       </div>
