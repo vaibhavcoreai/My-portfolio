@@ -78,7 +78,7 @@ export function Hero() {
             >
               {/* Button content */}
               <span className="relative z-10 text-sm tracking-[0.2em] uppercase font-medium text-black group-hover:text-white transition-colors duration-300">
-                Learning journey
+                GitHub
               </span>
 
               <motion.div

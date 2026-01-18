@@ -63,7 +63,7 @@ https://vaibhavmanaji.vercel.app
 ## 📬 Contact
 
 * GitHub: [https://github.com/vaibhavcoreai/](https://github.com/vaibhavcoreai/)
-* LinkedIn: [https://www.linkedin.com/in/vaibhav-manaji-40a9ab290/](https://www.linkedin.com/in/vaibhav-manaji-40a9ab290/)
+* LinkedIn: [https://www.linkedin.com/in/vaibhav-manaji](https://www.linkedin.com/in/vaibhav-manaji-40a9ab290/)
 * Email: [vaibhav.core.ai@gmail.com](mailto:vaibhav.core.ai@gmail.com)
 
 ---
