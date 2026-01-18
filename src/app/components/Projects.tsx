@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { projectsData } from './ProjectData';
+import { learningJourneyData } from './ProjectData';
 import { ProjectCardTransition } from './ProjectCardTransition';
 
 export function Projects() {
@@ -12,7 +12,7 @@ export function Projects() {
   const handleProjectClick = (e: React.MouseEvent, projectId: string, projectTitle: string) => {
     e.preventDefault();
     setClickedProject({ id: projectId, title: projectTitle });
-    
+
     // Navigate after animation starts
     setTimeout(() => {
       navigate(`/project/${projectId}`);
@@ -22,8 +22,8 @@ export function Projects() {
   return (
     <section id="journey" className="min-h-screen flex items-center justify-center px-6 py-20 relative z-30">
       {/* Project card transition overlay */}
-      <ProjectCardTransition 
-        projectTitle={clickedProject?.title} 
+      <ProjectCardTransition
+        projectTitle={clickedProject?.title}
         isActive={!!clickedProject}
       />
 
@@ -37,9 +37,9 @@ export function Projects() {
           <h2 className="text-sm tracking-[0.3em] uppercase mb-12 text-neutral-600">
             Learning Journey
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
-            {projectsData.map((project, index) => (
+            {learningJourneyData.map((project, index) => (
               <Link
                 key={project.id}
                 to={`/project/${project.id}`}
@@ -67,7 +67,7 @@ export function Projects() {
                       }}
                       transition={{ duration: 0.6 }}
                     />
-                    
+
                     {/* Overlay */}
                     <motion.div
                       className="absolute inset-0 bg-black"
@@ -82,7 +82,7 @@ export function Projects() {
                     <h3 className="text-2xl">
                       {project.title}
                     </h3>
-                    
+
                     <div className="flex gap-6 text-sm text-neutral-600">
                       <span>{project.category}</span>
                       <span>{project.year}</span>

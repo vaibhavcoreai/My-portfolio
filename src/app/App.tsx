@@ -6,6 +6,7 @@ import {
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "motion/react";
 import { HomePage } from "./components/HomePage";
+import { ProjectsPage } from "./components/ProjectsPage";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { OpeningAnimation } from "./components/OpeningAnimation";
@@ -67,6 +68,7 @@ export default function App() {
           <PageTransition>
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
               <Route
                 path="/project/:projectId"
                 element={<ProjectDetail />}

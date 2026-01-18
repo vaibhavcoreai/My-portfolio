@@ -14,7 +14,8 @@ export interface ProjectData {
   role: string;
 }
 
-export const projectsData: ProjectData[] = [
+// Learning Journey - Data Science & ML Learning Path
+export const learningJourneyData: ProjectData[] = [
   {
     id: 'Foundations',
     title: 'Foundations',
@@ -68,11 +69,35 @@ export const projectsData: ProjectData[] = [
     technologies: ['Python', 'Scikit-learn', 'Linear Regression', 'Model Evaluation'],
     duration: 'Planned · Foundation Stage',
     role: 'Supervised Learning Basics'
+  }
+];
+
+// Actual Built Projects - Real applications and websites
+export const actualProjectsData: ProjectData[] = [
+  {
+    id: 'writer-app',
+    title: 'Writer',
+    category: 'Full-stack Development',
+    year: '2026',
+    image: '/writer-project.png',
+    description: 'A sanctuary for your thoughts. Distraction-free writing platform for modern storytellers, featuring real-time sync, focus mode, and a public library for readers.',
+    challenge: 'To create an elegant, minimalist writing platform that eliminates distractions while providing powerful features for both writers (content creation, chapter management, publishing) and readers (discovery, engagement, responsive reading experience). The challenge was balancing simplicity with functionality while ensuring real-time data synchronization and security.',
+    solution: '1. Built distraction-free editor with TipTap for seamless rich-text experience 2. Implemented Firebase Authentication (Google OAuth & Email/Password) for secure access 3. Utilized Cloud Firestore for real-time data sync without page refreshes 4. Designed focus mode and smart auto-save to prevent content loss 5. Created public library with advanced filtering and discovery features 6. Implemented granular Firestore security rules for data privacy 7. Deployed on Vercel with Firebase Hosting for optimal performance',
+    results: [
+      'Successfully deployed production-ready writing platform',
+      'Implemented real-time collaboration features with Cloud Firestore',
+      'Created seamless authentication flow with Firebase Auth',
+      'Built responsive design optimized for all devices',
+      'Achieved smooth UX with carefully crafted micro-interactions'
+    ],
+    technologies: ['React 19', 'Vite 7', 'Tailwind CSS 4', 'TipTap', 'React Router 7', 'Firebase Auth', 'Cloud Firestore', 'Vercel', 'TypeScript'],
+    duration: 'Completed · January 2026',
+    role: 'Full-stack Development · UI/UX Design · Firebase Integration'
   },
   {
     id: 'portfolio-website',
     title: 'Portfolio Website',
-    category: 'Front-end ',
+    category: 'Front-end Development',
     year: '2026',
     image: 'https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: 'A personal portfolio created to document my learning journey and growth in technology.',
@@ -81,11 +106,14 @@ export const projectsData: ProjectData[] = [
     results: [
       'Built and deployed my first professional portfolio',
       'Improved understanding of frontend development',
-      '65% decrease in false positives',
+      'Learned advanced animations with Framer Motion',
       'Created a platform to document future projects and achievements'
     ],
-    technologies: ['React', 'Tailwind CSS', 'JavaScript', 'UI/UX Design', 'Git & GitHub',],
+    technologies: ['React', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'Vite', 'Git & GitHub'],
     duration: 'Active · Self-Initiated Project',
     role: 'Frontend Development & Personal Branding'
   }
 ];
+
+// Combined data for routing (backward compatibility)
+export const projectsData: ProjectData[] = [...learningJourneyData, ...actualProjectsData];
