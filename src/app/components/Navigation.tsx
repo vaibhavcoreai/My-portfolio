@@ -6,8 +6,8 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Journey', href: '#journey' },
-    { name: 'Projects', href: '/projects' },
+    { name: 'Journey', href: '/journey' },
+    { name: 'Projects', href: '/#projects' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ];

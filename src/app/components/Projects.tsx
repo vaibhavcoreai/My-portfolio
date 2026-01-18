@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { learningJourneyData } from './ProjectData';
+import { actualProjectsData } from './ProjectData';
 import { ProjectCardTransition } from './ProjectCardTransition';
 
 export function Projects() {
@@ -20,7 +20,7 @@ export function Projects() {
   };
 
   return (
-    <section id="journey" className="min-h-screen flex items-center justify-center px-6 py-20 relative z-30">
+    <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-20 relative z-30">
       {/* Project card transition overlay */}
       <ProjectCardTransition
         projectTitle={clickedProject?.title}
@@ -35,11 +35,11 @@ export function Projects() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-sm tracking-[0.3em] uppercase mb-12 text-neutral-600">
-            Learning Journey
+            Selected Projects
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {learningJourneyData.map((project, index) => (
+            {actualProjectsData.map((project, index) => (
               <Link
                 key={project.id}
                 to={`/project/${project.id}`}
