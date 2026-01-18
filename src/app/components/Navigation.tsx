@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,16 +29,19 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8 text-sm">
             {menuItems.map((item, i) => (
-              <motion.a
+              <motion.div
                 key={item.name}
-                href={item.href}
-                className="tracking-[0.1em] uppercase hover:text-neutral-600 transition-colors"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
               >
-                {item.name}
-              </motion.a>
+                <Link
+                  to={item.href}
+                  className="tracking-[0.1em] uppercase hover:text-neutral-600 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
             ))}
           </div>
 
@@ -62,17 +66,20 @@ export function Navigation() {
           >
             <div className="flex flex-col items-center gap-8">
               {menuItems.map((item, i) => (
-                <motion.a
+                <motion.div
                   key={item.name}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.1 }}
-                  className="text-2xl tracking-[0.2em] uppercase hover:text-neutral-600 transition-colors"
                 >
-                  {item.name}
-                </motion.a>
+                  <Link
+                    to={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-2xl tracking-[0.2em] uppercase hover:text-neutral-600 transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.div>
