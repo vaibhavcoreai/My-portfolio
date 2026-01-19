@@ -76,11 +76,11 @@ export function About() {
                   <h3 className="text-xs tracking-[0.2em] uppercase mb-6 text-neutral-400 font-semibold">
                     Focus Areas
                   </h3>
-                  <div className="flex flex-wrap gap-x-6 gap-y-3">
+                  <div className="flex flex-wrap gap-x-4 gap-y-3 md:gap-x-6">
                     {['Python for Data Science', 'Statistics & Probability', 'SQL & Databases', 'Machine Learning'].map((skill, i) => (
                       <motion.span
                         key={skill}
-                        className="text-base text-neutral-700 relative group cursor-default"
+                        className="text-sm md:text-base text-neutral-700 relative group cursor-default whitespace-nowrap"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
