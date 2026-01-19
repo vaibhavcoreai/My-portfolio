@@ -9,8 +9,8 @@ export function Navigation() {
   const menuItems = [
     { name: 'Journey', href: '/journey' },
     { name: 'Projects', href: '/#projects' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'About', href: '/#about' },
+    { name: 'Contact', href: '/#contact' }
   ];
 
   return (
